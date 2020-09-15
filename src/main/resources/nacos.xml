@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns="http://www.springframework.org/schema/beans"
+       xmlns:nacos="http://nacos.io/schema/nacos"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://nacos.io/schema/nacos
+       http://nacos.io/schema/nacos.xsd">
+    <!--开启注解-->
+    <nacos:annotation-driven/>
+
+    <!--nacos服务地址以及命名空间-->
+    <nacos:global-properties server-addr="10.9.2.235:8848" namespace="9174c7c5-c5fa-445c-adb2-a0993d64f85c"/>
+
+    <!--nacos的指定配置文件和组id以及文件类型-->
+    <nacos:property-source data-id="spring_nacos.properties" group-id="DEFAULT_GROUP" type="properties"/>
+</beans>
